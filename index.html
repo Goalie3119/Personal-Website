@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew's Portfolio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/experiences.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/typing-animation.js"></script>
+    <script src="js/unity-icons-animation.js"></script>
+    <script src="js/experience-expand.js"></script>
+    <script src="js/hamburger-menu.js"></script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Mobile-only profile box that appears at the top -->
+        <div class="mobile-profile-box">
+            <img src="content/logo.png" alt="Matt's Logo" class="profile-image">
+            <p class="profile-text">Cybersecurity Emphasis</p>
+        </div>
+        
+        <!-- Mobile-only sticky navigation bar -->
+        <nav class="mobile-nav-bar">
+            <div class="mobile-nav-container">
+                <button class="hamburger-menu" id="hamburger-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="mobile-nav-menu" id="mobile-nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Projects</a></li>
+                    <li><a href="#work">Experiences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Hero Container (Always First) -->
+        <div id="home" class="container hero-container">
+            <nav class="sidebar">
+                <div class="profile-box">
+                    <img src="content/logo.png" alt="Matt's Logo" class="profile-image">
+                    <p class="profile-text">Computer Science Emphasis</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Projects</a></li>
+                    <li><a href="#work">Experiences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://github.com/Goalie3119" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/matthew-d-4aa9bb236/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </nav>
+            
+            <main class="content">
+                <canvas id="matrix-canvas" class="matrix-background"></canvas>
+                <canvas id="music-notes-canvas" class="music-notes-background"></canvas>
+                
+                <!-- Hero Section with improved layout -->
+                <section class="hero">
+                    <div class="hero-content">
+                        <div class="hero-intro">
+                            <span class="hero-greeting">Hello, I'm</span>
+                        </div>
+                        
+                        <h1 class="hero-name">
+                            <span id="typing-text-name"></span>
+                            <span class="cursor cursor-name">|</span>
+                        </h1>
+                        
+                        <div class="hero-title">
+                            <span id="typing-text-title"></span>
+                            <span class="cursor cursor-title">|</span>
+                        </div>
+                        
+                        <p class="hero-description">
+                            <span id="typing-text-description"></span>
+                            <span class="cursor cursor-description">|</span>
+                        </p>
+                        
+                        <div class="hero-cta">
+                            <a href="#skills" class="cta-button primary">
+                                <span>Explore My Work</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                            <a href="#contact" class="cta-button secondary">
+                                <span>Get In Touch</span>
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating elements for cybersecurity theme -->
+                    <div class="hero-decorations">
+                        <div class="floating-icon" data-delay="0">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="floating-icon" data-delay="0.5">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="floating-icon" data-delay="1">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="floating-icon" data-delay="1.5">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Scroll indicator -->
+                <div class="scroll-indicator">
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <span class="scroll-text">Scroll to explore</span>
+                </div>
+            </main>
+        </div>
+
+        <!-- Content Sections (Always After Hero) -->
+        <div class="sections-container">
+            <!-- About Section -->
+            <section id="about" class="section about-section">
+                <div class="section-container">
+                    <h2 class="section-title"><span class="title-highlight">About</span></h2>
+                    <div class="about-content">
+                        <div class="person-icon">
+                            <img src="content/me.jpeg" alt="Matt's Profile" class="profile-image-about">
+                        </div>
+                        <p class="about-text">
+                            I'm a Computer Science student at The University of Tampa with a strong foundation in software development and experience in Python, Java, C++, Type Script, HTML, C#, and Unity, driven by a commitment to continuous learning. I enjoy the blend of creativity and problem-solving that software/game development offers and am always eager to take on new challenges and expand my skills. Outside of academics, I coach college level eSports, as well as play semi-professional eSports along with stream on twitch. I also play men's ice hockey, and stay active in the gym, which helps me maintain discipline and balance in my life.                         </p>
+                        <div class="interest-icons">
+                            <div class="icon-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Coding</span>
+                            </div>
+                            <div class="icon-item">
+                                <i class="fas fa-gamepad"></i>
+                                <span>eSports</span>
+                            </div>
+                            <div class="icon-item">
+                                <i class="fas fa-database"></i>
+                                <span>Data</span>
+                            </div>
+                            <div class="icon-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Learning</span>
+                            </div>
+                            <div class="icon-item">
+                                <i class="fas fa-running"></i>
+                                <span>Fitness</span>
+                            </div>
+                            <div class="icon-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Coaching</span>
+                            </div>
+                            <div class="icon-item">
+                                <i class="fa-brands fa-unity"></i>
+                                <span>Unity</span>
+                            </div>
+                            <div class="icon-item">
+                                <i class="fa-brands fa-twitch"></i>
+                                <span>Twitch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="skills" class="section projects-section">
+                <div class="section-container">
+                    <h2 class="section-title"><span class="title-highlight">Projects</span></h2>
+                    <div class="projects-content">
+                        <div class="projects-grid">
+                            <!-- Project Card 1: Scenario Showdown -->
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <i class="fab fa-github"></i>
+                                    <h3 class="project-title">Psychology Computerized Card Game</h3>
+                                </div>
+                                <p class="project-description">A Psychology card game turned into a computerized version that implements AI in various ways between NPCs, grading/feedback, and hints for the player. Created during Summer Internship with UTampa Psych departments head Dr. Stephen Blessing.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">AI</span>
+                                </div>
+                                <a href="https://github.com/Goalie3119/Scenario-Showdown" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <!-- Project Card 2: Website Creaetion for TampaPalmsCenter -->
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <i class="fab fa-github"></i>
+                                    <h3 class="project-title">Customer Website</h3>
+                                </div>
+                                <p class="project-description">Website created for a customer looking to upgrade their previous website, using HTML, TypeScript, and Tailwind CSS. The website is currently deployed on Vercel, as the customer wants the code to be private through their own github.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">PHP</span>
+                                    <span class="tech-tag">TailwindCSS</span>
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                </div>
+                                <a href="https://tppcgroup1.vercel.app/" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <!-- Project Card 3: Portfolio Website -->
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <i class="fab fa-github"></i>
+                                    <h3 class="project-title">Portfolio Website</h3>
+                                </div>
+                                <p class="project-description">My personal cyberpunk-themed portfolio website built with HTML, CSS, and JavaScript.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <a href="https://github.com/Goalie3119/Personal-Website" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <!-- Empty Project Card 4 (Placeholder) -->
+                            <div class="project-card empty-card">
+                                <div class="empty-content">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <p>Future Project</p>
+                                </div>
+                            </div>
+
+                            <!-- Empty Project Card 5 (Placeholder) -->
+                            <div class="project-card empty-card">
+                                <div class="empty-content">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <p>Future Project</p>
+                                </div>
+                            </div>
+
+                            <!-- Empty Project Card 6 (Placeholder) -->
+                            <div class="project-card empty-card">
+                                <div class="empty-content">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <p>Future Project</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experiences Section -->
+            <section id="work" class="section experiences-section">
+                <div class="section-container">
+                    <h2 class="section-title"><span class="title-highlight">Experiences</span></h2>
+                    <div class="experiences-content">
+                        <div class="experience-card" data-expandable>
+                            <div class="experience-header" data-toggle>
+                                <h3 class="company-name">Summer Intern With Dr. Stephen Blessing</h3>
+                                <div class="header-right">
+                                    <span class="experience-date">Summer 2025</span>
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </div>
+                            </div>
+                            <div class="experience-content">
+                                <h4 class="job-title"><span>Game Development Intern</span></h4>
+                                <p class="experience-description">
+                                    Worked solo to create a game using Unity and C#. The game was an educational psychology card game that uitlizes AI to give the user feedback, hints/help, and unique NPC's.
+                                </p>
+                                <div class="experience-tags">
+                                    <span class="tag">Problem Solving</span>
+                                    <span class="tag">Unity</span>
+                                    <span class="tag">Customer Experience</span>
+                                    <span class="tag">C#</span>
+                                    <span class="tag">AI</span>
+                                    <span class="tag">Game Development</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-card" data-expandable>
+                            <div class="experience-header" data-toggle>
+                                <h3 class="company-name">Collegiate eSports Coach</h3>
+                                <div class="header-right">
+                                    <span class="experience-date">2025 - Present</span>
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </div>
+                            </div>
+                            <div class="experience-content">
+                                <h4 class="job-title">Independent Coach</h4>
+                                <p class="experience-description">
+                                    Coach for collegiate eSports teams, Brookedale Community College. Coaching the Overwatch 2 team from a no win season to an almost perfect season, climbing the ranking system.
+                                </p>
+                                <div class="experience-tags">
+                                    <span class="tag">eSports</span>
+                                    <span class="tag">Team Management</span>
+                                    <span class="tag">Communication</span>
+                                    <span class="tag">Organization</span>
+                                    <span class="tag">Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-card" data-expandable>
+                            <div class="experience-header" data-toggle>
+                                <h3 class="company-name">High School Ice Hockey</h3>
+                                <div class="header-right">
+                                    <span class="experience-date">2018 - 2022</span>
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </div>
+                            </div>
+                            <div class="experience-content">
+                                <h4 class="job-title">D1 Ice Hockey Goalie</h4>
+                                <p class="experience-description">
+                                    Played D1 Ice Hockey for the Capistrano Coyotes from 2018-2022. Won Nationals in 2021, and made the all star team. Was a Captain and Assistant Captain throughout my whole time with the team.</p>
+                                <div class="experience-tags">
+                                    <span class="tag">Ice Hockey</span>
+                                    <span class="tag">Goalie</span>
+                                    <span class="tag">Perseverance</span>
+                                    <span class="tag">Leadership</span>
+                                    <span class="tag">Teamwork</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section">
+                <div class="section-container">
+                    <div class="contact-content">
+                        <div class="contact-left">
+                            <h2 class="contact-title">Get In Touch</h2>
+                        </div>
+                        <div class="contact-right">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:dauriagoalie31@gmail.com">dauriagoalie31@gmail.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fab fa-linkedin"></i>
+                                    <a href="https://www.linkedin.com/in/matthew-d-4aa9bb236/" target="_blank">LinkedIn Profile</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/Goalie3119" target="_blank">GitHub Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Back to Top Button -->
+    <a href="#home" id="backToTop" class="back-to-top visible" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+ </body>
+ </html>
